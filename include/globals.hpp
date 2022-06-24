@@ -8,6 +8,8 @@ namespace motor {
 	extern pros::Motor right_f;
 	extern pros::Motor right_m;
     extern pros::Motor right_b;
+    extern pros::Motor flywheel1;
+    extern pros::Motor flywheel2;
 }
 
 extern pros::Controller Master;

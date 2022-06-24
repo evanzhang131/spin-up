@@ -84,5 +84,7 @@ void autonomous() {}
 void opcontrol() {
 	while (true) {
 		drive::op_drive();
+		op_flywheel();
+		pros::delay(20);
 	}
 }

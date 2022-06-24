@@ -50,4 +50,22 @@ namespace drive {
 		motor::right_m.move(rightPower);
         motor::right_b.move(rightPower);
     }
+
+	
+}
+
+bool run_flywheel = false;
+
+void op_flywheel() {
+	if (Master.get_digital(DIGITAL_A)) {
+		run_flywheel = !run_flywheel;
+	}
+	if (run_flywheel) {
+		motor::flywheel1.move(127);
+		motor::flywheel2.move(127);
+	}
+	else {
+		motor::flywheel1.move(0);
+		motor::flywheel2.move(0);
+	}
 }
