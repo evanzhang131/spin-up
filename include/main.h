@@ -34,6 +34,7 @@
  */
 #define PROS_USE_LITERALS
 
+#pragma once
 #include "api.h"
 #include "globals.hpp"
 #include "drive.hpp"

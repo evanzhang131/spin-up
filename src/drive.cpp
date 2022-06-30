@@ -1,3 +1,4 @@
+#include "drive.hpp"
 #include "main.h"
 
 namespace drive {
@@ -58,7 +59,10 @@ bool run_flywheel = false;
 
 void op_flywheel() {
 	if (Master.get_digital(DIGITAL_A)) {
-		run_flywheel = !run_flywheel;
+		run_flywheel = true;
+	}
+	else if (Master.get_digital(DIGITAL_B)) {
+		run_flywheel = false;
 	}
 	if (run_flywheel) {
 		motor::flywheel1.move(127);
@@ -68,4 +72,14 @@ void op_flywheel() {
 		motor::flywheel1.move(0);
 		motor::flywheel2.move(0);
 	}
+}
+
+
+bool piston_out = false;
+
+void op_pto() {
+	if (Master.get_digital(DIGITAL_X)) piston_out = true;
+	else if (Master.get_digital(DIGITAL_Y)) piston_out = false;
+	if (piston_out) piston::pto.set_value(true);
+	else piston::pto.set_value(false);
 }

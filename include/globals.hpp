@@ -12,4 +12,8 @@ namespace motor {
     extern pros::Motor flywheel2;
 }
 
+namespace piston {
+    extern pros::ADIDigitalOut pto;    
+}
+
 extern pros::Controller Master;

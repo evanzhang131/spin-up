@@ -6,5 +6,7 @@ namespace drive {
 }
 
 extern bool run_flywheel;
+extern bool piston_out;
 
 void op_flywheel();
+void op_pto();

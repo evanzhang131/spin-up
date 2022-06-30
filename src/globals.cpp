@@ -8,7 +8,11 @@ namespace motor {
 	pros::Motor right_m(5, pros::E_MOTOR_GEARSET_06, true, pros::E_MOTOR_ENCODER_COUNTS);
     pros::Motor right_b(6, pros::E_MOTOR_GEARSET_06, true, pros::E_MOTOR_ENCODER_COUNTS);
     pros::Motor flywheel1(7, pros::E_MOTOR_GEARSET_06, true, pros::E_MOTOR_ENCODER_COUNTS);
-    pros::Motor flywheel2(8, pros::E_MOTOR_GEARSET_06, false, pros::E_MOTOR_ENCODER_COUNTS);
+    pros::Motor flywheel2(9, pros::E_MOTOR_GEARSET_06, false, pros::E_MOTOR_ENCODER_COUNTS);
+}
+
+namespace piston {
+    pros::ADIDigitalOut pto('A');
 }
 
 pros::Controller Master (pros::E_CONTROLLER_MASTER);
